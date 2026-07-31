@@ -220,7 +220,7 @@ export function HomePage() {
     <SiteLayout>
       {/* @section: hero-title */}
       <section className="home-hero">
-        <img className="hero-image" src="/images/axp_hero_city_2.png" alt="A connected contemporary African coastal city at first light" />
+        <img className="hero-image" src="https://res.cloudinary.com/gxhmv4fu/image/upload/w_2400,c_limit,f_auto,q_auto/axp_hero_building_m7lbh5" alt="A connected contemporary African coastal city at first light" fetchPriority="high" />
         <div className="hero-scrim" />
         <div className="shell hero-content">
           <p className="eyebrow eyebrow--gold">Making Urban Living Possible</p>
