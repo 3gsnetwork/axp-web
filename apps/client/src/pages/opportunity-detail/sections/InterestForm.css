@@ -1,0 +1,85 @@
+.interest-concept {
+  background: var(--axp-navy-2);
+  color: white;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 95px;
+  align-items: start;
+}
+
+.interest-grid h2 {
+  margin: 0 0 20px;
+  font: 500 clamp(2.4rem,4vw,4.2rem)/1.1 var(--font-serif);
+}
+
+.interest-grid > div > p:not(.eyebrow) {
+  color: rgba(255,255,255,.68);
+  line-height: 1.75;
+}
+
+.interest-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 32px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.13);
+}
+
+.interest-form label {
+  display: grid;
+  gap: 7px;
+  color: rgba(255,255,255,.65);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.interest-form input, .interest-form select {
+  width: 100%;
+  min-height: 47px;
+  border: 1px solid rgba(26,35,61,.16);
+  border-radius: 0;
+  background: rgba(255,255,255,.92);
+  color: var(--axp-navy);
+  padding: 11px 12px;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.interest-form .button, .interest-form small {
+  grid-column: span 2;
+}
+
+.interest-form small {
+  color: rgba(255,255,255,.5);
+  font-size: 9px;
+}
+
+@media (max-width: 1120px) {
+  .interest-grid {
+    gap: 55px;
+  }
+}
+
+@media (max-width: 900px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+@media (max-width: 680px) {
+  .interest-form {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-form .button, .interest-form small {
+    grid-column: auto;
+  }
+}

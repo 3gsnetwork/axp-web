@@ -1,0 +1,45 @@
+.architecture-section .section-heading {
+  margin-bottom: 55px;
+}
+
+.architecture-stack {
+  width: min(100%,920px);
+  margin-left: auto;
+  display: grid;
+  gap: 8px;
+}
+
+.architecture-stack article {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  padding: 23px 28px;
+  background: var(--axp-alabaster);
+  border-left: 4px solid var(--axp-gold);
+}
+
+.architecture-stack article:nth-child(2) { margin-left: 50px; }
+.architecture-stack article:nth-child(3) { margin-left: 100px; }
+.architecture-stack article:nth-child(4) { margin-left: 150px; }
+
+.architecture-stack span {
+  color: var(--axp-gold);
+  font: 500 13px var(--font-serif);
+}
+
+.architecture-stack h3 {
+  margin: 0 0 3px;
+  font: 500 20px var(--font-serif);
+}
+
+.architecture-stack p {
+  margin: 0;
+  color: #737781;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .architecture-stack article:nth-child(n) {
+    margin-left: 0;
+  }
+}

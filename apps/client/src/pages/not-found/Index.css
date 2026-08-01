@@ -1,0 +1,30 @@
+.not-found {
+  min-height: 72vh;
+  display: grid;
+  place-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.not-found > div {
+  max-width: 700px;
+}
+
+.not-found > div > span {
+  color: var(--axp-gold);
+  font: 500 20px var(--font-serif);
+}
+
+.not-found h1 {
+  font: 500 clamp(2.7rem,5vw,5rem)/1.05 var(--font-serif);
+  color: var(--axp-navy);
+}
+
+.not-found p {
+  color: #70747e;
+}
+
+.not-found .button-row {
+  justify-content: center;
+  margin-top: 28px;
+}

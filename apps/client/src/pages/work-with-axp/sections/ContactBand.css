@@ -1,0 +1,43 @@
+.work-contact {
+  color: white;
+}
+
+.work-contact-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.work-contact h2 {
+  margin: 0 0 22px;
+  font: 500 clamp(2.4rem,4.4vw,4.5rem)/1.08 var(--font-serif);
+  letter-spacing: -.04em;
+  color: white;
+}
+
+.work-contact-grid > div:first-child > p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(255,255,255,.68);
+  line-height: 1.8;
+}
+
+.work-contact-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.work-contact-action small {
+  color: rgba(255,255,255,.48);
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 900px) {
+  .work-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}

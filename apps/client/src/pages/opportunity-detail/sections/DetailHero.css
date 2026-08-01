@@ -1,0 +1,75 @@
+.opportunity-detail-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: end;
+  color: white;
+  overflow: hidden;
+  background: var(--axp-navy);
+}
+
+.opportunity-detail-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.opportunity-detail-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 145px 0 85px;
+}
+
+.opportunity-detail-hero-content .concept-label {
+  margin-bottom: 20px;
+  color: white;
+  border-color: rgba(255,255,255,.42);
+  background: rgba(14,23,44,.48);
+}
+
+.opportunity-detail-hero-content > p {
+  margin: 0 0 12px;
+  color: var(--axp-gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.opportunity-detail-hero h1 {
+  max-width: 860px;
+  margin: 0 0 17px;
+  font: 500 clamp(3.2rem,6vw,6.1rem)/1 var(--font-serif);
+  letter-spacing: -.05em;
+}
+
+.opportunity-detail-hero-content > strong {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--axp-gold-light);
+  font: 500 25px var(--font-serif);
+}
+
+.opportunity-detail-hero-content > small {
+  display: block;
+  max-width: 600px;
+  margin-top: 17px;
+  color: rgba(255,255,255,.62);
+  font-size: 10px;
+}
+
+@media (max-width: 680px) {
+  .opportunity-detail-hero {
+    min-height: 560px;
+  }
+
+  .opportunity-detail-hero-content {
+    padding: 120px 0 58px;
+  }
+
+  .opportunity-detail-hero h1 {
+    font-size: 3.1rem;
+  }
+}

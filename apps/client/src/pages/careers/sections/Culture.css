@@ -1,0 +1,34 @@
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.culture-grid article {
+  min-height: 230px;
+  padding: 30px;
+  background: white;
+}
+
+.culture-grid h3 {
+  font: 500 24px/1.25 var(--font-serif);
+  color: var(--axp-navy);
+}
+
+.culture-grid p {
+  color: #70757f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .culture-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}

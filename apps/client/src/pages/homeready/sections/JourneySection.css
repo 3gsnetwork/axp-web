@@ -1,0 +1,130 @@
+.journey-section .section-heading {
+  margin-bottom: 48px;
+}
+
+.journey-tabs {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  border: 1px solid rgba(26,35,61,.13);
+}
+
+.journey-tabs button {
+  border: 0;
+  border-right: 1px solid rgba(26,35,61,.13);
+  padding: 19px;
+  background: transparent;
+  font: 500 14px var(--font-serif);
+  cursor: pointer;
+}
+
+.journey-tabs button:last-child {
+  border-right: 0;
+}
+
+.journey-tabs button span {
+  display: block;
+  margin-bottom: 6px;
+  color: #9b9da3;
+  font: 500 9px var(--font-serif);
+}
+
+.journey-tabs button.active {
+  background: var(--axp-navy);
+  color: white;
+}
+
+.journey-tabs button.active span {
+  color: var(--axp-gold-light);
+}
+
+.journey-stage {
+  min-height: 260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 30px;
+  gap: 70px;
+  align-items: center;
+  padding: 45px;
+  background: white;
+  border: 1px solid rgba(26,35,61,.13);
+  border-top: 0;
+}
+
+.journey-stage h3 {
+  font: 500 32px var(--font-serif);
+  margin: 0 0 9px;
+}
+
+.journey-stage p {
+  color: #676c77;
+  line-height: 1.7;
+}
+
+.journey-path {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.journey-line {
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  top: 17px;
+  height: 2px;
+  background: #ddd9cf;
+}
+
+.journey-line i {
+  display: block;
+  height: 100%;
+  background: var(--axp-gold);
+  transition: width .4s ease;
+}
+
+.journey-path button {
+  position: relative;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d4d0c6;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.journey-path button.reached {
+  background: var(--axp-gold);
+  border-color: var(--axp-gold);
+  color: var(--axp-navy);
+}
+
+.journey-path svg {
+  width: 14px;
+}
+
+@media (max-width: 900px) {
+  .journey-stage {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .journey-stage > svg {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .journey-tabs {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .journey-tabs button {
+    min-width: 120px;
+  }
+
+  .journey-stage {
+    padding: 30px 20px;
+  }
+}

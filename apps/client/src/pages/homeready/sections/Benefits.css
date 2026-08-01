@@ -1,0 +1,32 @@
+.benefit-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+.benefit-columns h3 {
+  font: 500 28px var(--font-serif);
+  color: var(--axp-gold-light);
+}
+
+.benefit-columns p {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  padding: 13px 0;
+  color: rgba(255,255,255,.75);
+}
+
+.benefit-columns svg {
+  width: 17px;
+  color: var(--axp-gold-light);
+}
+
+@media (max-width: 680px) {
+  .benefit-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

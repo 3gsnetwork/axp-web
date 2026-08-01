@@ -1,0 +1,113 @@
+.opportunity-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid rgba(26,35,61,.13);
+  box-shadow: 0 10px 28px rgba(26,35,61,.045);
+}
+
+.opportunity-card-image {
+  position: relative;
+  aspect-ratio: 1.18/1;
+  overflow: hidden;
+  background: var(--axp-navy);
+}
+
+.opportunity-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.opportunity-card:hover .opportunity-card-image img {
+  transform: scale(1.035);
+}
+
+.opportunity-card-image .concept-label {
+  position: absolute;
+  left: 13px;
+  bottom: 13px;
+  color: white;
+  border-color: rgba(255,255,255,.42);
+  background: rgba(14,23,44,.72);
+  backdrop-filter: blur(8px);
+}
+
+.opportunity-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 23px;
+}
+
+.opportunity-location {
+  margin: 0 0 8px;
+  color: var(--axp-gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.opportunity-card h3 {
+  margin: 0 0 10px;
+  font: 500 23px/1.2 var(--font-serif);
+  color: var(--axp-navy);
+}
+
+.opportunity-title {
+  min-height: 44px;
+  margin: 0 0 13px;
+  color: #747985;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.opportunity-card-body > strong {
+  color: var(--axp-navy);
+  font: 500 17px var(--font-serif);
+}
+
+.opportunity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 17px 0;
+}
+
+.opportunity-tags span {
+  border: 1px solid rgba(26,35,61,.12);
+  padding: 6px 7px;
+  color: #626875;
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.opportunity-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 19px;
+  color: #686e7a;
+  font-size: 10px;
+}
+
+.opportunity-specs span + span {
+  border-left: 1px solid rgba(26,35,61,.16);
+  padding-left: 8px;
+}
+
+.opportunity-card .arrow-link {
+  margin-top: auto;
+}
+
+.opportunity-card--compact h3 {
+  font-size: 20px;
+}
+
+.opportunity-card--compact .opportunity-card-body {
+  padding: 19px;
+}
