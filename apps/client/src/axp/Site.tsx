@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, NavLink, useLocation, useParams, type NavLinkRenderProps } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeInUp, springPresets, staggerContainer, staggerItem } from "@/lib/motion";
 import {
   ArrowRight,
   BarChart3,
@@ -234,11 +236,11 @@ export function HomePage() {
       {/* @section: featured-opportunities */}
       <section className="section featured-opportunities">
         <div className="shell">
-          <div className="split-heading"><SectionHeading eyebrow="Featured opportunities" title="Start with an opportunity that fits your next chapter." copy="A curated view of the kinds of homeownership pathways AXP is designed to help people explore." /><Link to="/home-ownership-opportunities" className="button button--outline">View all opportunities <ArrowRight size={16} /></Link></div>
+          <motion.div className="split-heading" variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.4 }}><SectionHeading eyebrow="Featured opportunities" title="Start with an opportunity that fits your next chapter." copy="A curated view of the kinds of homeownership pathways AXP is designed to help people explore." /><Link to="/home-ownership-opportunities" className="button button--outline">View all opportunities <ArrowRight size={16} /></Link></motion.div>
           <p className="opportunity-disclaimer">Illustrative concept opportunities only. These are not verified listings, offers or currently available AXP properties.</p>
-          <div className="featured-opportunities-grid">
-            {opportunityData.map((opportunity) => <OpportunityCard key={opportunity.slug} opportunity={opportunity} compact />)}
-          </div>
+          <motion.div className="featured-opportunities-grid" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
+            {opportunityData.map((opportunity) => <motion.div key={opportunity.slug} variants={staggerItem} whileHover={{ y: -6, transition: springPresets.snappy }}><OpportunityCard opportunity={opportunity} compact /></motion.div>)}
+          </motion.div>
         </div>
       </section>
 
