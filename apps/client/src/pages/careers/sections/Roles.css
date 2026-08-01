@@ -1,0 +1,49 @@
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.roles-grid article {
+  min-height: 320px;
+  padding: 32px;
+  background: var(--axp-alabaster);
+  display: flex;
+  flex-direction: column;
+}
+
+.roles-grid svg {
+  color: var(--axp-gold);
+  margin-bottom: 55px;
+}
+
+.roles-grid h3 {
+  font: 500 25px var(--font-serif);
+}
+
+.roles-grid p {
+  color: #6d727d;
+  line-height: 1.7;
+  font-size: 12px;
+}
+
+.roles-grid > article > span, .roles-grid > article > a {
+  margin-top: auto;
+  color: var(--axp-gold);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.roles-grid > article > a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}

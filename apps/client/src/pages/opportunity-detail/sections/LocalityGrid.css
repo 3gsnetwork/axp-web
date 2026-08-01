@@ -1,0 +1,43 @@
+.locality-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  margin-top: 52px;
+  background: rgba(26,35,61,.12);
+}
+
+.locality-grid article {
+  min-height: 220px;
+  padding: 29px;
+  background: white;
+}
+
+.locality-grid svg {
+  color: var(--axp-gold);
+  margin-bottom: 38px;
+}
+
+.locality-grid h3 {
+  margin: 0 0 10px;
+  color: var(--axp-navy);
+  font: 500 23px var(--font-serif);
+}
+
+.locality-grid p {
+  margin: 0;
+  color: #747985;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .locality-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .locality-grid {
+    grid-template-columns: 1fr;
+  }
+}

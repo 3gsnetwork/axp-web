@@ -1,0 +1,32 @@
+.governance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.governance-list {
+  display: grid;
+  gap: 1px;
+  background: rgba(255,255,255,.12);
+}
+
+.governance-list div {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 20px 22px;
+  background: var(--axp-navy);
+  color: rgba(255,255,255,.78);
+}
+
+.governance-list svg {
+  color: var(--axp-gold-light);
+}
+
+@media (max-width: 900px) {
+  .governance-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}

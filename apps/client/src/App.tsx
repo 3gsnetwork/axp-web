@@ -2,20 +2,18 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import {
-  CareersPage,
-  ContactPage,
-  HomePage,
-  HomeOwnershipOpportunitiesPage,
-  OpportunityDetailPage,
-  HomeReadyPage,
-  ImpactPage,
-  KnowledgePage,
-  MediaPage,
-  NotFoundPage,
-  WhoWeArePage,
-  WorkWithAXPPage,
-} from "./axp/Site";
+import { HomePage } from "@/pages/home/Index";
+import { HomeOwnershipOpportunitiesPage } from "@/pages/home-ownership-opportunities/Index";
+import { OpportunityDetailPage } from "@/pages/opportunity-detail/Index";
+import { WhoWeArePage } from "@/pages/who-we-are/Index";
+import { HomeReadyPage } from "@/pages/homeready/Index";
+import { WorkWithAXPPage } from "@/pages/work-with-axp/Index";
+import { KnowledgePage } from "@/pages/knowledge/Index";
+import { ImpactPage } from "@/pages/impact/Index";
+import { MediaPage } from "@/pages/media/Index";
+import { CareersPage } from "@/pages/careers/Index";
+import { ContactPage } from "@/pages/contact/Index";
+import { NotFoundPage } from "@/pages/not-found/Index";
 
 const queryClient = new QueryClient();
 

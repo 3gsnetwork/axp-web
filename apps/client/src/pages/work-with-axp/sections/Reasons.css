@@ -1,0 +1,51 @@
+.work-reasons-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.work-reasons-grid h2 {
+  margin: 0 0 22px;
+  color: var(--axp-navy);
+  font: 500 clamp(2.4rem,4.4vw,4.5rem)/1.08 var(--font-serif);
+  letter-spacing: -.04em;
+}
+
+.work-reasons-grid > div:first-child > p:not(.eyebrow) {
+  color: #676c77;
+  line-height: 1.8;
+}
+
+.work-reasons-list {
+  display: grid;
+  gap: 1px;
+  background: rgba(26,35,61,.12);
+}
+
+.work-reasons-list > div {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  background: white;
+}
+
+.work-reasons-list svg {
+  flex: 0 0 auto;
+  color: var(--axp-gold);
+}
+
+.work-reasons-list span {
+  color: var(--axp-navy);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .work-reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}

@@ -1,0 +1,32 @@
+.contact-office-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  background: rgba(26,35,61,.12);
+}
+
+.contact-office-grid > div {
+  padding: 32px;
+  background: white;
+}
+
+.contact-office-grid svg {
+  color: var(--axp-gold);
+  margin-bottom: 30px;
+}
+
+.contact-office-grid h3 {
+  font: 500 22px var(--font-serif);
+}
+
+.contact-office-grid p {
+  color: #717681;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .contact-office-grid {
+    grid-template-columns: 1fr;
+  }
+}

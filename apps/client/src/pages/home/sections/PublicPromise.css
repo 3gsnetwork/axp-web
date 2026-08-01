@@ -1,0 +1,76 @@
+.public-promise-section {
+  background: white;
+}
+
+.public-promise-grid {
+  display: grid;
+  grid-template-columns: .88fr 1.12fr;
+  gap: 95px;
+  align-items: start;
+}
+
+.public-promise-grid > .public-promise-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.public-promise-grid > div:first-child > .arrow-link {
+  margin-top: 30px;
+}
+
+.public-promise-cards article {
+  min-height: 360px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  background: var(--axp-alabaster);
+  border-top: 3px solid var(--axp-gold);
+}
+
+.public-promise-cards article > span {
+  color: var(--axp-gold);
+  font: 500 12px var(--font-serif);
+}
+
+.public-promise-cards h3 {
+  margin: auto 0 14px;
+  color: var(--axp-navy);
+  font: 500 29px/1.2 var(--font-serif);
+}
+
+.public-promise-cards p {
+  color: #686d78;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.public-promise-cards a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--axp-navy);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1120px) {
+  .public-promise-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+@media (max-width: 680px) {
+  .public-promise-grid,
+  .public-promise-grid > .public-promise-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .public-promise-cards article {
+    min-height: 320px;
+  }
+}

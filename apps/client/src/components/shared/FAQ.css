@@ -1,0 +1,35 @@
+.faq-list {
+  max-width: 900px;
+  margin-top: 45px;
+}
+
+.faq-list > div {
+  border-bottom: 1px solid rgba(26,35,61,.16);
+}
+
+.faq-list button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 500 18px var(--font-serif);
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-list button svg {
+  transition: transform .25s;
+}
+
+.faq-list .active button svg {
+  transform: rotate(180deg);
+}
+
+.faq-list p {
+  padding: 0 55px 24px 0;
+  color: #676c77;
+  line-height: 1.8;
+}

@@ -1,0 +1,19 @@
+.source-note {
+  grid-column: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,.43);
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+.source-note:hover {
+  color: white;
+}
+
+@media (max-width: 680px) {
+  .source-note {
+    min-width: 0;
+  }
+}
