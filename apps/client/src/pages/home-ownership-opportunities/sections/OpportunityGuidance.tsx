@@ -1,13 +1,36 @@
 import "./OpportunityGuidance.css";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+
+const readinessSteps = [
+  "Understand your ownership readiness",
+  "Explore pathways that suit your goals",
+  "Connect to support once opportunities are approved",
+];
 
 export function OpportunityGuidance() {
   return (
     <section className="section section--navy opportunity-guidance">
-      <div className="shell feature-split">
-        <div><p className="eyebrow eyebrow--gold">The AXP difference</p><h2>AXP is not selling houses. AXP is helping people own homes.</h2></div>
-        <div className="feature-copy feature-copy--light"><p>Every concept is framed around a more confident ownership journey: understand your readiness, explore suitable pathways, and connect to appropriate support when live opportunities are approved.</p><Link to="/homeready" className="button button--gold">Start with HomeReady™ <ArrowRight size={16} /></Link></div>
+      <div className="shell opportunity-guidance-grid">
+        <div>
+          <p className="eyebrow eyebrow--gold">The AXP difference</p>
+          <h2>AXP is not selling houses. AXP is helping people own homes.</h2>
+          <ul className="check-list">
+            {readinessSteps.map((step) => (
+              <li key={step}>
+                <Check aria-hidden />
+                {step}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="opportunity-guidance-action">
+          <Link to="/homeready" className="button button--gold">
+            Start with HomeReady™ <ArrowRight size={16} />
+          </Link>
+          <span className="prototype-note">Guidance concept · not a financial or eligibility assessment</span>
+        </div>
       </div>
     </section>
   );
