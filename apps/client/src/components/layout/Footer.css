@@ -51,6 +51,30 @@
   font: italic 500 13px var(--font-serif);
 }
 
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  color: rgba(255,255,255,.56);
+  font-size: 14px;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+
+.footer-social a:hover {
+  border-color: var(--axp-gold-light);
+  color: white;
+}
+
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -74,6 +98,33 @@
 
 .footer-links a:hover {
   color: white;
+}
+
+.footer-contact-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 28px;
+  margin-top: 10px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-contact-row a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  color: rgba(255,255,255,.58);
+  font-size: 11px;
+  transition: color 200ms ease;
+}
+
+.footer-contact-row a:hover {
+  color: white;
+}
+
+.footer-contact-row svg {
+  color: var(--axp-gold-light);
 }
 
 .footer-bottom {
