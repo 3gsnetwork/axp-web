@@ -18,4 +18,10 @@
   .featured-opportunities-grid {
     grid-template-columns: 1fr;
   }
+
+  .featured-opportunities .split-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
