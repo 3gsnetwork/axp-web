@@ -1,5 +1,5 @@
 import "./Benefits.css";
-import { Check } from "lucide-react";
+import { Check, Compass, Footprints } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const understandItems = ["A clearer view of the journey", "Useful mortgage and affordability education", "Awareness of common document needs", "Realistic expectations before a formal application"];
@@ -11,8 +11,16 @@ export function Benefits() {
       <div className="shell">
         <SectionHeading light eyebrow="What you gain" title="More clarity. Better preparation. Greater confidence." />
         <div className="benefit-columns">
-          <div><h3>Understand your position</h3>{understandItems.map((x) => <p key={x}><Check />{x}</p>)}</div>
-          <div><h3>Prepare your next step</h3>{prepareItems.map((x) => <p key={x}><Check />{x}</p>)}</div>
+          <div className="benefit-column">
+            <Compass className="benefit-icon" aria-hidden size={20} />
+            <h3>Understand your position</h3>
+            <ul>{understandItems.map((x) => <li key={x}><Check aria-hidden />{x}</li>)}</ul>
+          </div>
+          <div className="benefit-column">
+            <Footprints className="benefit-icon" aria-hidden size={20} />
+            <h3>Prepare your next step</h3>
+            <ul>{prepareItems.map((x) => <li key={x}><Check aria-hidden />{x}</li>)}</ul>
+          </div>
         </div>
       </div>
     </section>
