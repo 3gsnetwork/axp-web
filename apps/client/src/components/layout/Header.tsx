@@ -21,7 +21,12 @@ export function Header() {
         <BrandMark />
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <NavLink key={item.to} to={item.to} className={({ isActive }: NavLinkRenderProps) => (isActive ? "nav-link active" : "nav-link")}>
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }: NavLinkRenderProps) => (isActive ? "nav-link active" : "nav-link")}
+            >
               {item.label}
             </NavLink>
           ))}
@@ -48,7 +53,7 @@ export function Header() {
       {open && (
         <div className="mobile-nav">
           {[...navItems, { label: "Media Centre", to: "/media" }, { label: "Careers", to: "/careers" }, { label: "Contact", to: "/contact" }].map((item) => (
-            <NavLink key={item.to} to={item.to}>{item.label}<ChevronRight size={18} /></NavLink>
+            <NavLink key={item.to} to={item.to} end={item.to === "/"}>{item.label}<ChevronRight size={18} /></NavLink>
           ))}
           <Link to="/contact" className="button button--primary">Choose why you’re here <ArrowRight size={16} /></Link>
         </div>
