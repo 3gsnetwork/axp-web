@@ -147,6 +147,15 @@
 }
 
 @media (max-width: 680px) {
+  .footer-cta .button-row {
+    display: grid;
+    grid-template-columns: max-content;
+  }
+
+  .footer-cta .button-row .button {
+    width: auto;
+  }
+
   .footer-links {
     grid-template-columns: 1fr 1fr;
   }
