@@ -41,7 +41,7 @@
 }
 
 .product-hero h1 {
-  margin: 22px 0 7px;
+  margin: 24px 0 16px;
   font: 500 clamp(4rem,8vw,7.5rem)/.9 var(--font-serif);
   color: var(--axp-gold-light);
   letter-spacing: -.06em;
@@ -53,11 +53,13 @@
 }
 
 .product-hero h2 {
+  margin: 0 0 28px;
   max-width: 750px;
   font: 500 clamp(2rem,3.5vw,3.7rem)/1.1 var(--font-serif);
 }
 
 .product-hero p {
+  margin: 0 0 40px;
   max-width: 690px;
   color: rgba(255,255,255,.68);
   font-size: 17px;
@@ -65,7 +67,7 @@
 }
 
 .product-hero .prototype-note {
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .phone-shell {
@@ -76,8 +78,19 @@
   border-radius: 28px;
   background: rgba(255,255,255,.085);
   backdrop-filter: blur(22px);
-  box-shadow: var(--shadow-deep);
+  box-shadow: var(--shadow-deep), inset 0 1px 0 rgba(255,255,255,.32);
   transform: rotate(2deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .phone-shell {
+    animation: phoneFloat 7s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes phoneFloat {
+  from { transform: rotate(2deg) translateY(0); }
+  to { transform: rotate(2deg) translateY(-10px); }
 }
 
 .phone-top {
@@ -160,6 +173,7 @@
   margin: 5px -8px;
   border: 1px solid rgba(212,160,42,.38);
   background: rgba(212,160,42,.08);
+  box-shadow: 0 8px 22px rgba(212,160,42,.14);
 }
 
 @media (max-width: 1120px) {

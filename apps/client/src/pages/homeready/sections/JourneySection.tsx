@@ -23,7 +23,7 @@ export function JourneySection() {
             <div className="journey-line"><i style={{ width: `${step * 25}%` }} /></div>
             {steps.map((item, index) => <button key={item.title} className={index <= step ? "reached" : ""} onClick={() => setStep(index)}>{index < step ? <Check /> : index + 1}</button>)}
           </div>
-          <div><p className="eyebrow">{steps[step].label}</p><h3>{steps[step].title}</h3><p>{steps[step].copy}</p></div>
+          <div key={step} className="journey-stage-content"><p className="eyebrow">{steps[step].label}</p><h3>{steps[step].title}</h3><p>{steps[step].copy}</p></div>
           <ArrowRight />
         </div>
       </div>

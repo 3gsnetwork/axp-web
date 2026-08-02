@@ -1,4 +1,5 @@
 .module-grid {
+  counter-reset: module;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 1px;
@@ -7,18 +8,75 @@
   border: 1px solid rgba(26,35,61,.13);
 }
 
+/* Overrides the global .module-grid article:hover lift (index.css)
+   so this grid's flat navy fill-in hover doesn't also raise the
+   card. Scoped via .shell for specificity so the shared rule (also
+   used by platform-card, impact-frame, culture-grid, roles-grid and
+   opportunity-card elsewhere) is unaffected everywhere else. */
+.shell .module-grid article:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .module-grid article {
-  min-height: 235px;
-  padding: 31px;
+  position: relative;
+  counter-increment: module;
+  min-height: 250px;
+  padding: 36px 32px;
   background: white;
+  overflow: hidden;
+  transition: color .3s ease;
+}
+
+.module-grid article::before {
+  content: counter(module, decimal-leading-zero);
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 18px;
+  font: 500 13px var(--font-serif);
+  color: var(--axp-gold);
+}
+
+.module-grid article::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0 0;
+  z-index: 0;
+  background: var(--axp-navy);
+  transition: inset .35s ease;
+}
+
+.module-grid article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.module-grid article:not(:first-child):hover {
+  color: white;
+}
+
+.module-grid article:not(:first-child):hover::after {
+  inset: 0;
+}
+
+.module-grid article:not(:first-child):hover p {
+  color: rgba(255,255,255,.7);
 }
 
 .module-grid svg {
+  width: 26px;
+  height: 26px;
   color: var(--axp-gold);
-  margin-bottom: 45px;
+  margin-bottom: 20px;
+}
+
+.module-grid article:not(:first-child):hover svg {
+  color: var(--axp-gold-light);
 }
 
 .module-grid h3 {
+  margin: 0 0 10px;
   font: 500 21px var(--font-serif);
 }
 
@@ -29,14 +87,122 @@
   line-height: 1.7;
 }
 
+/* Feature tile: the first module leads the grid as a wide,
+   permanently navy cell spanning two columns of row one, echoing
+   the gold decorative ring already used on this page's hero and on
+   the homepage's platform-card--feature. */
+.module-grid article:first-child {
+  grid-column: span 2;
+  padding: 44px 48px;
+  background: var(--axp-navy);
+  color: white;
+}
+
+.module-grid article:first-child::before {
+  color: var(--axp-gold-light);
+}
+
+.module-grid article:first-child::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  z-index: 0;
+  width: 260px;
+  height: 260px;
+  right: -100px;
+  top: -90px;
+  background: none;
+  border: 1px solid rgba(212,160,42,.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 40px rgba(212,160,42,.03);
+  transition: box-shadow .35s ease;
+}
+
+.module-grid article:first-child:hover::after {
+  box-shadow: 0 0 0 55px rgba(212,160,42,.05);
+}
+
+.module-grid article:first-child svg {
+  width: 30px;
+  height: 30px;
+  color: var(--axp-gold-light);
+}
+
+.module-grid article:first-child h3 {
+  font-size: 25px;
+}
+
+.module-grid article:first-child p {
+  max-width: 380px;
+  color: rgba(255,255,255,.68);
+}
+
+/* Closing tile: the final module spans the full width as a
+   horizontal banner (icon left, heading + copy right) with a gold
+   top border, matching the "important panel" accent already used
+   on the opportunities filter panel elsewhere on the site. */
+.module-grid article:last-child {
+  grid-column: span 3;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 28px;
+  align-items: center;
+  padding: 32px 40px;
+  border-top: 2px solid var(--axp-gold);
+}
+
+.module-grid article:last-child::before {
+  display: none;
+}
+
+.module-grid article:last-child svg {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  margin: 0;
+}
+
+.module-grid article:last-child h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 0 6px;
+}
+
+.module-grid article:last-child p {
+  grid-column: 2;
+  grid-row: 2;
+}
+
 @media (max-width: 900px) {
   .module-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .module-grid article:last-child {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 680px) {
   .module-grid {
     grid-template-columns: 1fr;
+  }
+
+  .module-grid article:first-child,
+  .module-grid article:last-child {
+    grid-column: span 1;
+  }
+
+  .module-grid article:first-child {
+    padding: 36px 28px;
+  }
+
+  .module-grid article:last-child {
+    display: block;
+    padding: 28px 24px;
+  }
+
+  .module-grid article:last-child svg {
+    margin-bottom: 20px;
   }
 }
