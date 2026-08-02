@@ -3,9 +3,14 @@
 }
 
 .opportunity-filter-panel {
-  padding: 37px;
+  padding: 40px;
   background: var(--axp-alabaster);
-  border-top: 3px solid var(--axp-gold);
+  border-top: 2px solid var(--axp-gold);
+  box-shadow: var(--shadow-soft);
+}
+
+.opportunity-filter-head {
+  margin-bottom: 32px;
 }
 
 .opportunity-filter-panel h2, .opportunity-results-head h2 {
@@ -16,13 +21,18 @@
 
 .opportunity-filters {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 12px;
-  margin-top: 27px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
 }
 
-.opportunity-filters label {
+.opportunity-field {
   display: grid;
+  gap: 10px;
+}
+
+.opportunity-field-label {
+  display: inline-flex;
+  align-items: center;
   gap: 7px;
   color: #646a76;
   font-size: 9px;
@@ -31,26 +41,68 @@
   text-transform: uppercase;
 }
 
-.opportunity-filters select {
+.opportunity-field-label svg {
+  width: 13px;
+  height: 13px;
+  color: var(--axp-gold);
+}
+
+.opportunity-select {
+  position: relative;
+  display: flex;
+}
+
+.opportunity-select select {
   width: 100%;
-  min-height: 47px;
+  min-height: 48px;
   border: 1px solid rgba(26,35,61,.16);
   border-radius: 0;
   background: white;
   color: var(--axp-navy);
-  padding: 11px 12px;
-  font-size: 12px;
+  padding: 12px 34px 12px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
   letter-spacing: 0;
   text-transform: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.opportunity-select select:hover {
+  border-color: rgba(212,160,42,.6);
+}
+
+.opportunity-select select:focus-visible {
+  outline: none;
+  border-color: var(--axp-gold);
+  box-shadow: 0 0 0 3px rgba(212,160,42,.16);
+}
+
+.opportunity-select-chevron {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  width: 15px;
+  height: 15px;
+  color: var(--axp-grey);
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform .2s ease, color .2s ease;
+}
+
+.opportunity-select select:focus-visible ~ .opportunity-select-chevron {
+  color: var(--axp-gold);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .pathway-filter-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 9px 16px;
-  margin: 20px 0 0;
-  padding: 16px 0 0;
+  gap: 10px;
+  margin: 32px 0 0;
+  padding: 24px 0 0;
   border: 0;
   border-top: 1px solid rgba(26,35,61,.14);
 }
@@ -65,31 +117,89 @@
   text-transform: uppercase;
 }
 
-.pathway-filter-group label {
+.pathway-chip {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  border: 1px solid rgba(26,35,61,.16);
+  border-radius: 999px;
+  background: white;
+  padding: 10px 16px;
   color: var(--axp-navy);
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 600;
+  letter-spacing: .02em;
   cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-.pathway-filter-group input {
-  width: 15px;
-  height: 15px;
-  accent-color: var(--axp-gold);
+.pathway-chip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.pathway-chip:hover {
+  border-color: rgba(212,160,42,.6);
+}
+
+.pathway-chip:has(input:checked) {
+  border-color: var(--axp-gold);
+  background: rgba(212,160,42,.1);
+  box-shadow: inset 0 0 0 1px var(--axp-gold);
+}
+
+.pathway-chip:has(input:focus-visible) {
+  outline: 2px solid var(--axp-gold);
+  outline-offset: 3px;
+}
+
+.opportunity-filter-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .filter-note {
-  margin: -33px 0 32px;
+  margin: 0;
+  max-width: 560px;
   color: #737781;
   font-size: 12px;
   line-height: 1.65;
 }
 
-.opportunity-filter-panel .filter-note {
-  margin: 18px 0 0;
+.filter-reset {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--axp-navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.filter-reset svg {
+  width: 13px;
+  height: 13px;
+  transition: transform .35s ease;
+}
+
+.filter-reset:hover {
+  color: var(--axp-gold);
+}
+
+.filter-reset:hover svg {
+  transform: rotate(-75deg);
 }
 
 .opportunity-results-head {
@@ -97,12 +207,12 @@
   justify-content: space-between;
   align-items: end;
   gap: 30px;
-  margin: 70px 0 32px;
+  margin: 64px 0 32px;
 }
 
 .opportunity-grid {
   display: grid;
-  gap: 14px;
+  gap: 24px;
   grid-template-columns: repeat(3,1fr);
 }
 
@@ -110,8 +220,10 @@
   min-height: 350px;
   display: grid;
   place-content: center;
+  gap: 2px;
   text-align: center;
   background: var(--axp-alabaster);
+  border: 1px dashed rgba(26,35,61,.18);
 }
 
 .empty-state svg {
@@ -122,17 +234,16 @@
 .empty-state h3 {
   margin: 15px 0 5px;
   font: 500 25px var(--font-serif);
+  color: var(--axp-navy);
 }
 
 .empty-state p {
+  margin: 0 0 20px;
   color: #767a84;
 }
 
-.empty-state button {
-  border: 0;
-  border-bottom: 1px solid var(--axp-navy);
-  background: transparent;
-  cursor: pointer;
+.empty-state .filter-reset {
+  margin: 0 auto;
 }
 
 @media (max-width: 1120px) {
@@ -149,17 +260,32 @@
 
 @media (max-width: 680px) {
   .opportunity-filter-panel {
-    padding: 25px 20px;
+    padding: 24px 20px;
+  }
+
+  .opportunity-filter-head {
+    margin-bottom: 24px;
   }
 
   .opportunity-filters {
     grid-template-columns: 1fr;
   }
 
+  .pathway-filter-group {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .opportunity-filter-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
   .opportunity-results-head {
     align-items: start;
     flex-direction: column;
-    margin: 52px 0 25px;
+    margin: 48px 0 24px;
   }
 
   .opportunity-grid {

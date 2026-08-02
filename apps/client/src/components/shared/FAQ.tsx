@@ -11,5 +11,22 @@ const items: [string, string][] = [
 
 export function FAQ() {
   const [open, setOpen] = useState(0);
-  return <div className="faq-list">{items.map(([q, a], index) => <div key={q} className={open === index ? "active" : ""}><button onClick={() => setOpen(open === index ? -1 : index)}><span>{q}</span><ChevronDown /></button>{open === index && <p>{a}</p>}</div>)}</div>;
+  return (
+    <div className="faq-list">
+      {items.map(([q, a], index) => {
+        const isOpen = open === index;
+        return (
+          <div key={q} className={isOpen ? "active" : ""}>
+            <button onClick={() => setOpen(isOpen ? -1 : index)} aria-expanded={isOpen}>
+              <span>{q}</span>
+              <ChevronDown aria-hidden />
+            </button>
+            <div className="faq-answer" aria-hidden={!isOpen}>
+              <p>{a}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }

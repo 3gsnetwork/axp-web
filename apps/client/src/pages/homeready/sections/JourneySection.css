@@ -11,10 +11,17 @@
 .journey-tabs button {
   border: 0;
   border-right: 1px solid rgba(26,35,61,.13);
-  padding: 19px;
+  padding: 20px;
   background: transparent;
   font: 500 14px var(--font-serif);
+  color: var(--axp-navy);
+  text-align: left;
   cursor: pointer;
+  transition: background .2s ease;
+}
+
+.journey-tabs button:hover:not(.active) {
+  background: rgba(26,35,61,.045);
 }
 
 .journey-tabs button:last-child {
@@ -40,10 +47,14 @@
 .journey-stage {
   min-height: 260px;
   display: grid;
-  grid-template-columns: 1fr 1fr 30px;
-  gap: 70px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "path path"
+    "content arrow";
   align-items: center;
-  padding: 45px;
+  row-gap: 36px;
+  column-gap: 70px;
+  padding: 48px;
   background: white;
   border: 1px solid rgba(26,35,61,.13);
   border-top: 0;
@@ -59,17 +70,25 @@
   line-height: 1.7;
 }
 
+.journey-stage-content {
+  grid-area: content;
+}
+
 .journey-path {
+  grid-area: path;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(26,35,61,.1);
 }
 
 .journey-line {
   position: absolute;
-  left: 17px;
-  right: 17px;
-  top: 17px;
+  left: 18px;
+  right: 18px;
+  top: 18px;
   height: 2px;
   background: #ddd9cf;
 }
@@ -84,13 +103,25 @@
 .journey-path button {
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   border: 1px solid #d4d0c6;
   border-radius: 50%;
   background: white;
+  color: var(--axp-grey);
   cursor: pointer;
-  font-size: 10px;
+  font: 600 11px var(--font-sans);
+  line-height: 1;
+  transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.journey-path button:hover:not(.reached) {
+  border-color: var(--axp-gold);
+  color: var(--axp-navy);
+  transform: scale(1.08);
 }
 
 .journey-path button.reached {
@@ -101,12 +132,35 @@
 
 .journey-path svg {
   width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.journey-stage > svg {
+  grid-area: arrow;
+  width: 22px;
+  height: 22px;
+  color: var(--axp-gold);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .journey-stage-content {
+    animation: journeyFadeIn .35s ease;
+  }
+}
+
+@keyframes journeyFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 900px) {
   .journey-stage {
     grid-template-columns: 1fr;
-    gap: 35px;
+    grid-template-areas:
+      "path"
+      "content";
+    row-gap: 32px;
   }
 
   .journey-stage > svg {
@@ -126,5 +180,9 @@
 
   .journey-stage {
     padding: 30px 20px;
+  }
+
+  .journey-path {
+    padding-bottom: 24px;
   }
 }
