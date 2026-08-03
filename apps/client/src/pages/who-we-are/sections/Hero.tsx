@@ -8,7 +8,9 @@ export function Hero() {
   const reduce = useReducedMotion();
   return (
     <section className="who-hero">
-      <div className="shell who-hero-grid">
+      <img className="who-hero-bg" src="https://res.cloudinary.com/gxhmv4fu/image/upload/w_2400,c_limit,f_auto,q_auto/v1785641067/who-we-are-hero-image_pyiov4.jpg" alt="" />
+      <div className="who-hero-scrim" />
+      <div className="shell who-hero-inner">
         <motion.div variants={staggerContainer} initial={reduce ? false : "hidden"} animate="visible">
           <motion.p className="eyebrow eyebrow--gold" variants={staggerItem}>Who we are</motion.p>
           <motion.h1 variants={staggerItem}>Helping make homeownership feel more possible.</motion.h1>
@@ -17,9 +19,6 @@ export function Hero() {
             <Link to="/home-ownership-opportunities" className="button button--gold">Explore opportunities <ArrowRight size={16} /></Link>
             <Link to="/work-with-axp" className="button button--ghost-light">Partner with AXP</Link>
           </motion.div>
-        </motion.div>
-        <motion.div className="who-hero-frame" initial={reduce ? false : { opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 30, delay: 0.15 }}>
-          <img src="https://res.cloudinary.com/gxhmv4fu/image/upload/w_1200,c_limit,f_auto,q_auto/v1785641067/who-we-are-hero-image_pyiov4.jpg" alt="" />
         </motion.div>
       </div>
     </section>
