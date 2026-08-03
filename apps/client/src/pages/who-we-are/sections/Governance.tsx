@@ -6,7 +6,6 @@ import { staggerContainer, staggerItem } from "@/lib/motion";
 
 const commitments = [
   "Clear, responsible communication that respects your information",
-  "Visible concept and illustrative labels",
   "No unverified availability claims",
   "Straightforward next steps",
 ];
@@ -16,7 +15,7 @@ export function Governance() {
   return (
     <section className="section governance-section section--navy">
       <div className="shell governance-grid">
-        <SectionHeading light eyebrow="Our public commitments" title="Trust begins with clarity." copy="AXP aims to make every public interaction responsible, understandable and honest about what is available today." />
+        <SectionHeading light eyebrow="Our public commitments" title="Trust begins with clarity." copy="AXP aims to make every public interaction responsible, understandable and honest." />
         <motion.div className="governance-list" variants={staggerContainer} initial={reduce ? false : "hidden"} whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
           {commitments.map((item) => <motion.div key={item} variants={staggerItem}><ShieldCheck /><span>{item}</span></motion.div>)}
         </motion.div>

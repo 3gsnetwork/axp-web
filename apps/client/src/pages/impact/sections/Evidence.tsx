@@ -11,7 +11,7 @@ export function Evidence() {
           <p className="eyebrow">Evidence before claims</p>
           <h2>Report only what can be supported.</h2>
           <p>As approved programmes and opportunities develop, AXP intends to communicate progress with clear definitions, appropriate evidence and honest context.</p>
-          <ul className="check-list"><li><Check /> Separate commitments from verified results</li><li><Check /> Label concept and illustrative content visibly</li><li><Check /> Explain what each future measure means</li><li><Check /> Avoid implying outcomes that have not been confirmed</li></ul>
+          <ul className="check-list"><li><Check /> Separate commitments from verified results</li><li><Check /> Explain what each future measure means</li><li><Check /> Avoid implying outcomes that have not been confirmed</li></ul>
           <Link to="/knowledge" className="button button--primary">Explore the Knowledge Centre <ArrowRight size={16} /></Link>
         </div>
       </div>

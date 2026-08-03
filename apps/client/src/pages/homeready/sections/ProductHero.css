@@ -66,10 +66,6 @@
   line-height: 1.75;
 }
 
-.product-hero .prototype-note {
-  margin-top: 24px;
-}
-
 .ledger-card {
   width: min(100%,380px);
   margin-left: auto;
@@ -79,14 +75,6 @@
   box-shadow: 0 2px 8px rgba(26,35,61,.05);
 }
 
-.ledger-card-label {
-  margin: 0 0 20px;
-  color: var(--axp-grey);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
 
 .ledger-card-header {
   display: flex;

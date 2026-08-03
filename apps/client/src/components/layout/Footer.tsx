@@ -37,7 +37,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom shell"><span>© 2026 AXP Africa Limited. Website concept.</span><span>Making Urban Living Possible · Africa</span></div>
+      <div className="footer-bottom shell"><span>© 2026 AXP Africa Limited.</span><span>Making Urban Living Possible · Africa</span></div>
     </footer>
   );
 }
