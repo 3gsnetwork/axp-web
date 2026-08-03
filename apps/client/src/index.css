@@ -477,7 +477,8 @@
   .module-grid article,
   .culture-grid article,
   .roles-grid article,
-  .opportunity-card {
+  .opportunity-card,
+  .collaboration-grid article {
     transition: transform .3s ease, box-shadow .3s ease;
   }
 
@@ -485,7 +486,8 @@
   .module-grid article:hover,
   .culture-grid article:hover,
   .roles-grid article:hover,
-  .opportunity-card:hover {
+  .opportunity-card:hover,
+  .collaboration-grid article:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-soft);
   }
