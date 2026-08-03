@@ -104,11 +104,11 @@ Thumbs.db
 # --- Uploaded Files ---
 uploaded_files/
 
-# --- AI assistant tooling (local/generated, not app code) ---
-.claude/settings.local.json
-.claude/skills/
+# --- Impeccable / AI agent tooling (local-only) ---
 .agents/
+.claude/
 .codex/
+skills-lock.json
 apps/client/.impeccable/
 
 # !!! DO NOT DELETE OR ADJUST: required by FC deploy flow !!!
