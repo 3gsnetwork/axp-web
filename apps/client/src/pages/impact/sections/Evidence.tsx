@@ -1,9 +1,10 @@
+import "./Evidence.css";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 
 export function Evidence() {
   return (
-    <section className="section section--alabaster">
+    <section className="section section--alabaster impact-evidence">
       <div className="shell feature-split">
         <div><img src="/images/homeready_people_2.png" alt="People considering a future homeownership journey" /></div>
         <div className="feature-copy">
