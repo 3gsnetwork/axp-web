@@ -110,6 +110,7 @@ uploaded_files/
 .codex/
 skills-lock.json
 apps/client/.impeccable/
+.impeccable/
 
 # !!! DO NOT DELETE OR ADJUST: required by FC deploy flow !!!
 !apps/server/dist/
