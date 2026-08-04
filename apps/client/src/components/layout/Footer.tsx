@@ -30,7 +30,7 @@ export function Footer() {
         <div className="footer-links">
           <div><h3>Explore</h3><Link to="/who-we-are">Who we are</Link><Link to="/home-ownership-opportunities">Home ownership opportunities</Link><Link to="/homeready">HomeReady™</Link><Link to="/impact">Impact</Link></div>
           <div><h3>Learn</h3><Link to="/knowledge">Knowledge Centre</Link><Link to="/work-with-axp">Work with AXP</Link><Link to="/contact">Contact AXP</Link></div>
-          <div><h3>Company</h3><Link to="/media">Media Centre</Link><Link to="/careers">Careers</Link><Link to="/contact">Contact</Link></div>
+          <div><h3>Company</h3><Link to="/contact">Contact</Link></div>
           <div className="footer-contact-row">
             <a href="https://wa.me/+2349026211153" target="_blank" rel="noreferrer"><FaWhatsapp /><span>WhatsApp</span></a>
             <a href="mailto:info@axplimited.com"><Mail size={15} /><span>Email</span></a>
