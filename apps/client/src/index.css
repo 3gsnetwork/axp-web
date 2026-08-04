@@ -449,7 +449,8 @@
   .roles-grid article,
   .opportunity-card,
   .collaboration-grid article,
-  .knowledge-grid article:not(.featured) {
+  .knowledge-grid article:not(.featured),
+  .contact-office-grid > div {
     transition: transform .3s ease, box-shadow .3s ease;
   }
 
@@ -459,7 +460,8 @@
   .roles-grid article:hover,
   .opportunity-card:hover,
   .collaboration-grid article:hover,
-  .knowledge-grid article:not(.featured):hover {
+  .knowledge-grid article:not(.featured):hover,
+  .contact-office-grid > div:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-soft);
   }
