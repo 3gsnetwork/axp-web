@@ -34,13 +34,11 @@ export function Routing() {
           <div className="route-result">
             <span>Your next step</span>
             <h2>{routeDetail[selected]}</h2>
-            <p>This private concept website does not send enquiries. A short contact form may be enabled only after recipients, privacy language, retention and data handling are approved.</p>
             <div className="route-form-preview">
               <label><span>Email</span><input placeholder="you@example.com" disabled /></label>
               <label><span>What would you like to discuss?</span><textarea placeholder="Briefly describe your question" disabled /></label>
               <button className="button button--primary" disabled>Continue</button>
             </div>
-            <small>Prototype state · no personal information is collected, stored or transmitted</small>
           </div>
         ) : (
           <div className="route-empty"><ArrowRight /><h2>Select the description closest to you.</h2><p>Your suggested next step will appear here.</p></div>

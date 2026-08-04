@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const stages = [
   { n: "01", t: "Understand", d: "Learn who AXP is and what we stand for" },
-  { n: "02", t: "Explore", d: "Review clearly labelled homeownership concepts" },
+  { n: "02", t: "Explore", d: "Review homeownership opportunities" },
   { n: "03", t: "Prepare", d: "Build readiness through HomeReady™ guidance" },
   { n: "04", t: "Connect", d: "Start a straightforward conversation with AXP" },
 ];

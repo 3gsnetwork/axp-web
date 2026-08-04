@@ -6,7 +6,6 @@ const items: [string, string][] = [
   ["Is HomeReady™ a mortgage lender?", "No. HomeReady™ is a guidance and preparation experience. Any formal finance decision would remain with an approved financial institution and be subject to its criteria."],
   ["Does a readiness score guarantee a mortgage?", "No. Readiness indicators support planning and education; they do not constitute an approval, offer or guarantee of finance."],
   ["Who is HomeReady™ for?", "It is designed for aspiring homeowners who want to understand the journey, improve their preparation and ask more informed questions."],
-  ["Can I register today?", "Not yet. This website shows a concept experience only. Registration is disabled, and no personal information is collected, stored or transmitted."],
 ];
 
 export function FAQ() {

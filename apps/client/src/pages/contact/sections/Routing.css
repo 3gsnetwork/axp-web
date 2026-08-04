@@ -95,13 +95,6 @@
   min-height: 85px;
 }
 
-.route-result > small {
-  display: block;
-  margin-top: 12px;
-  color: #8a8d94;
-  font-size: 8px;
-}
-
 .route-empty {
   display: grid;
   place-content: center;

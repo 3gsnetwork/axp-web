@@ -16,7 +16,6 @@ export function NextStepBand() {
         </div>
         <div className="next-step-action">
           <Link to="/contact?route=Looking%20for%20a%20Home" className="button button--gold">Register interest <ArrowRight size={16} /></Link>
-          <small>Prototype state · no personal information is collected, stored or transmitted</small>
         </div>
       </motion.div>
     </section>

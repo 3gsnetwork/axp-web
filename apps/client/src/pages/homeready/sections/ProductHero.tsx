@@ -15,10 +15,8 @@ export function ProductHero() {
           <h2>Your Journey to Homeownership Starts Here.</h2>
           <p>Build confidence through guidance, financial readiness, mortgage education and better-matched opportunities—at a pace that works for you.</p>
           <div className="button-row"><Link to="/contact?route=Looking%20for%20a%20Home" className="button button--gold">Register interest <ArrowRight size={16} /></Link><button className="button button--glass" onClick={() => document.getElementById("journey")?.scrollIntoView({ behavior: "smooth" })}>See how it works</button></div>
-          <small className="prototype-note">Product experience concept · customer registration is not yet connected</small>
         </motion.div>
         <motion.div className="ledger-card" variants={staggerItem}>
-          <p className="ledger-card-label">Concept preview · illustrative journey</p>
           <div className="ledger-card-header"><Sparkles size={16} /><span>HomeReady™ guidance covers</span></div>
           <ul className="check-list">
             <li><Check size={16} /> Financial readiness</li>
