@@ -448,7 +448,8 @@
   .culture-grid article,
   .roles-grid article,
   .opportunity-card,
-  .collaboration-grid article {
+  .collaboration-grid article,
+  .knowledge-grid article:not(.featured) {
     transition: transform .3s ease, box-shadow .3s ease;
   }
 
@@ -457,7 +458,8 @@
   .culture-grid article:hover,
   .roles-grid article:hover,
   .opportunity-card:hover,
-  .collaboration-grid article:hover {
+  .collaboration-grid article:hover,
+  .knowledge-grid article:not(.featured):hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-soft);
   }
