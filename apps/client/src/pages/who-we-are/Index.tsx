@@ -4,6 +4,7 @@ import { Story } from "./sections/Story";
 import { PurposeGrid } from "./sections/PurposeGrid";
 import { ArchitectureStack } from "./sections/ArchitectureStack";
 import { Governance } from "./sections/Governance";
+import { TestimonialsPartners } from "./sections/TestimonialsPartners";
 import { NextSteps } from "./sections/NextSteps";
 
 export function WhoWeArePage() {
@@ -14,6 +15,7 @@ export function WhoWeArePage() {
       <PurposeGrid />
       <ArchitectureStack />
       <Governance />
+      <TestimonialsPartners />
       <NextSteps />
     </SiteLayout>
   );
