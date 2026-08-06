@@ -8,7 +8,7 @@ export function Hero() {
   const reduce = useReducedMotion();
   return (
     <section className="who-hero">
-      <img className="who-hero-bg" src="https://res.cloudinary.com/gxhmv4fu/image/upload/w_2400,c_limit,f_auto,q_auto/v1785641067/who-we-are-hero-image_pyiov4.jpg" alt="" />
+      <img className="who-hero-bg" src="/images/african_city.jpg" alt="" />
       <div className="who-hero-scrim" />
       <div className="shell who-hero-inner">
         <motion.div variants={staggerContainer} initial={reduce ? false : "hidden"} animate="visible">
